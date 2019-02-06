@@ -1,0 +1,104 @@
+{
+  "name": "template-osteopathie",
+  "private": true,
+  "description": "Un modèle de site internet personnalisable dédié aux ostéopathes et aux professionnels de la santé",
+  "version": "0.1.0",
+  "author": "Azerty Studio",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "devDependencies": {
+    "del-cli": "^1.1.0",
+    "docz": "^0.12.15",
+    "gatsby-plugin-root-import": "^2.0.5",
+    "husky": "^1.1.4",
+    "lerna": "^3.4.3",
+    "lint-staged": "^8.0.4",
+    "prettier": "^1.15.2"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.2.4",
+    "@redq/reuse-modal": "^1.1.8",
+    "@zeit/next-css": "^1.0.1",
+    "aphrodite": "^2.2.3",
+    "formik": "^1.3.2",
+    "moment": "^2.22.2",
+    "next": "^7.0.2",
+    "next-compose-plugins": "^2.1.1",
+    "next-fonts": "^0.10.0",
+    "next-optimized-images": "^1.4.1",
+    "next-plugin-transpile-modules": "^0.1.3",
+    "rc-drawer": "^1.7.6",
+    "rc-progress": "^2.3.0",
+    "rc-slider": "^8.6.3",
+    "rc-tabs": "^9.5.6",
+    "rc-tooltip": "^3.7.3",
+    "react-accessible-accordion": "^2.4.5",
+    "react-anchor-link-smooth-scroll": "^1.0.11",
+    "react-content-loader": "^3.2.0",
+    "react-countup": "^4.0.0",
+    "react-dates": "^18.2.2",
+    "react-dropzone": "^7.0.1",
+    "react-google-maps": "^9.4.5",
+    "react-icons-kit": "^1.2.1",
+    "react-image-gallery": "^0.8.12",
+    "react-particles-js": "^2.4.2",
+    "react-places-autocomplete": "^7.2.0",
+    "react-reveal": "^1.2.2",
+    "react-rnd": "^9.0.4",
+    "react-scripts": "^2.1.1",
+    "react-scroll-parallax": "^1.3.5",
+    "react-scrollspy": "^3.3.5",
+    "react-select": "^2.1.1",
+    "react-stickynode": "^2.1.0",
+    "react-test-renderer": "^16.6.3",
+    "react-with-styles": "^3.2.1",
+    "react-with-styles-interface-aphrodite": "^5.0.1",
+    "rheostat": "^3.0.1",
+    "styled-system": "^3.1.11",
+    "babel-plugin-styled-components": "^1.10.0",
+    "gatsby": "^2.0.115",
+    "gatsby-image": "^2.0.29",
+    "gatsby-plugin-manifest": "^2.0.17",
+    "gatsby-plugin-offline": "^2.0.22",
+    "gatsby-plugin-react-helmet": "^3.0.6",
+    "gatsby-plugin-sharp": "^2.0.20",
+    "gatsby-plugin-styled-components": "^3.0.5",
+    "gatsby-source-filesystem": "^2.0.20",
+    "gatsby-transformer-sharp": "^2.1.13",
+    "prop-types": "^15.6.2",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-helmet": "^5.2.0",
+    "styled-components": "^4.1.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,md,css}": [
+      "prettier --trailing-comma es5 --single-quote --write",
+      "git add"
+    ]
+  }
+}
