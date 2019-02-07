@@ -39,6 +39,9 @@ const ButtonStyle = styled.button`
   &:focus {
     outline: none;
   }
+  &:hover {
+    background-color: ${themeGet('colors.secondary')};
+  }
 
   /* Material style goes here */
   &.is-material {

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const PortfolioShowcaseWrapper = styled.div`
   @keyframes FadeInUp {
@@ -14,7 +14,7 @@ export const PortfolioShowcaseWrapper = styled.div`
 
   .glide__controls {
     position: absolute;
-    bottom: -12px;
+    bottom: -40px;
     right: 0;
     @media (max-width: 990px) {
       bottom: 23px;
@@ -45,7 +45,7 @@ export const PortfolioShowcaseWrapper = styled.div`
         .rc-tabs-tab {
           font-size: 16px;
           font-weight: 700;
-          font-family: 'Raleway', sans-serif;
+          font-family: "Raleway", sans-serif;
           color: #43414e;
           display: inline-block;
           margin-right: 40px;
@@ -87,7 +87,7 @@ export const PortfolioShowcaseWrapper = styled.div`
               top: 0;
               left: 0;
               width: 0;
-              color: #3444f1;
+              color: ${props => props.theme.colors.primary};
               overflow: hidden;
               white-space: nowrap;
               transition: 0.5s ease-in-out;
@@ -136,8 +136,8 @@ export const PortfolioLink = styled.div`
   a {
     font-size: 16px;
     font-weight: 700;
-    font-family: 'Raleway', sans-serif;
-    color: #3444f1;
+    font-family: "Raleway", sans-serif;
+    color: ${props => props.theme.colors.primary};
     position: relative;
     padding: 0 0 2px 8px;
     @media (max-width: 990px) {
@@ -148,18 +148,18 @@ export const PortfolioLink = styled.div`
     }
     &:before,
     &:after {
-      content: '';
+      content: "";
       display: block;
       width: 58px;
       height: 15px;
       position: absolute;
-      background: #eaecfe;
+      background: ${props => props.theme.colors.portfolioLink};
       bottom: 0;
       left: 0;
       z-index: -1;
     }
     &:after {
-      background: #c2c7fb;
+      background: ${props => props.theme.colors.portfolioLinkHover};
       transform: scaleX(0);
       transform-origin: right center 0;
       transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0s;
@@ -176,6 +176,7 @@ export const PortfolioLink = styled.div`
 
 export const BuiltWith = styled.div`
   margin-top: 60px;
+  margin-left: -20px;
   @media (max-width: 990px) {
     margin-top: 30px;
   }
@@ -183,17 +184,17 @@ export const BuiltWith = styled.div`
     display: inline-block;
     font-size: 16px;
     font-weight: 600;
-    color: #3444f1;
-    font-family: 'Raleway', sans-serif;
+    color: ${props => props.theme.colors.primary};
+    font-family: "Raleway", sans-serif;
     padding: 5px 22px;
     position: relative;
     @media (max-width: 990px) {
       font-size: 14px;
       padding: 5px 10px;
     }
-    &:first-child {
+    /* &:first-child {
       padding-left: 0;
-    }
+    } */
     &:last-child {
       padding-right: 0;
       &:after {
@@ -201,7 +202,7 @@ export const BuiltWith = styled.div`
       }
     }
     &:after {
-      content: '|';
+      content: "|";
       position: absolute;
       display: block;
       top: 50%;
@@ -233,7 +234,7 @@ export const MetaItem = styled.span`
   margin-right: 45px;
   font-size: 16px;
   color: #43414e;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   @media (max-width: 990px) {
     font-size: 14px;
@@ -261,11 +262,11 @@ export const MetaItem = styled.span`
     }
   }
   > a {
-    color: #3444f1;
+    color: ${props => props.theme.colors.primary};
     font-weight: 700;
   }
   > b {
-    font-family: 'roboto', sans-serif;
+    font-family: "roboto", sans-serif;
     margin-right: 5px;
   }
 `;

@@ -1,6 +1,6 @@
-import styled, { createGlobalStyle } from 'styled-components';
-import { themeGet } from 'styled-system';
-import Line from '../../assets/image/portfolio/dotted-line.png';
+import styled, { createGlobalStyle } from "styled-components";
+import { themeGet } from "styled-system";
+import Line from "../../assets/image/portfolio/dotted-line.png";
 
 export const GlobalStyle = createGlobalStyle`
   body{
@@ -48,7 +48,7 @@ export const GlobalStyle = createGlobalStyle`
           a{
             font-size: 20px;
             font-weight: 500;
-            color: #343d48;
+            color: ${props => props.theme.colors.linkNavColor};;
             position: relative;
             font-family: 'Raleway', sans-serif;
             transition: 0.15s ease-in-out;
@@ -67,7 +67,7 @@ export const GlobalStyle = createGlobalStyle`
               position: absolute;
               width: calc(100% - 8px);
               height: 11px;
-              background: #c2c7fb;
+              background: ${props => props.theme.colors.navColor};
               bottom: 2px;
               left: -4px;
               z-index: -1;
@@ -111,7 +111,7 @@ export const GlobalStyle = createGlobalStyle`
         content: '\f10b';
         font-family: Flaticon;
         font-size: 26px;
-        color: #3444f1;
+        color: ${props => props.theme.colors.primary};
         transform: rotate(45deg);
         display: block;
       }
@@ -139,15 +139,15 @@ export const ContentWrapper = styled.div`
 
   .portfolio_button {
     border-radius: 0;
-    border: 2px solid ${themeGet('colors.borderColor', '#1b1e25')};
+    border: 2px solid ${themeGet("colors.borderColor")};
     background-color: transparent;
     position: relative;
     min-height: 50px;
     text-transform: initial;
     transition: 0.2s ease-in-out;
     &:before {
-      content: '';
-      background-color: ${themeGet('colors.primary', '#3444f1')};
+      content: "";
+      background-color: ${themeGet("colors.primary")};
       position: absolute;
       width: calc(100% + 4px);
       height: calc(100% + 4px);
@@ -209,7 +209,7 @@ export const ContentWrapper = styled.div`
           font-weight: 700;
           color: #fff;
           position: relative;
-          font-family: 'Raleway', sans-serif;
+          font-family: "Raleway", sans-serif;
           transition: 0.15s ease-in-out;
           &:hover {
             color: #fff;
@@ -220,11 +220,11 @@ export const ContentWrapper = styled.div`
             }
           }
           &:after {
-            content: '';
+            content: "";
             position: absolute;
             width: calc(100% - 8px);
             height: 11px;
-            background: #3444f1;
+            background: ${props => props.theme.colors.navColor};
             bottom: 6px;
             left: 0;
             z-index: -1;
@@ -240,7 +240,7 @@ export const ContentWrapper = styled.div`
     }
     .navbar_button {
       button {
-        font-family: 'Raleway', sans-serif;
+        font-family: "Raleway", sans-serif;
         font-weight: 700;
       }
       @media (max-width: 990px) {
@@ -263,9 +263,9 @@ export const ContentWrapper = styled.div`
       .main_menu {
         li {
           a {
-            color: #302b4e;
+            color: ${props => props.theme.colors.headingColor};
             &:after {
-              background: #c2c7fb;
+              background: ${props => props.theme.colors.navColorActive};
             }
           }
         }
@@ -278,7 +278,7 @@ export const ContentWrapper = styled.div`
     &:nth-child(3) {
       .process_item {
         &:before {
-          content: '';
+          content: "";
           background-image: url(${Line});
           width: 165px;
           height: 35px;
@@ -314,7 +314,7 @@ export const PrevButton = styled.div`
   cursor: pointer;
   &:hover {
     span {
-      background: #3444f1;
+      background: ${props => props.theme.colors.primaryHover};
       @media (min-width: 991px) {
         width: 100px;
       }
@@ -323,13 +323,13 @@ export const PrevButton = styled.div`
   span {
     width: 18px;
     height: 2px;
-    background: #d1d3de;
+    background: ${props => props.theme.colors.bgButton};
     display: block;
     position: relative;
     transition: 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     &:before,
     &:after {
-      content: '';
+      content: "";
       display: block;
       height: 2px;
       border-radius: 2px;
@@ -357,7 +357,7 @@ export const NextButton = styled.div`
   cursor: pointer;
   &:hover {
     span {
-      background: #3444f1;
+      background: ${props => props.theme.colors.primaryHover};
       @media (min-width: 991px) {
         width: 100px;
       }
@@ -366,13 +366,13 @@ export const NextButton = styled.div`
   span {
     width: 18px;
     height: 2px;
-    background: #d1d3de;
+    background: ${props => props.theme.colors.bgButton};
     display: block;
     position: relative;
     transition: 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     &:before,
     &:after {
-      content: '';
+      content: "";
       display: block;
       height: 2px;
       border-radius: 2px;

@@ -47,6 +47,14 @@ export const theme = {
         borderColor: colors.secondaryHover
       }
     },
+    ternary: {
+      color: colors.ternary,
+      borderColor: colors.ternary,
+      '&:hover': {
+        color: colors.ternaryHover,
+        borderColor: colors.ternaryHover
+      }
+    },
     warning: {
       color: colors.yellow,
       borderColor: colors.yellow,
@@ -79,6 +87,15 @@ export const theme = {
       '&:hover': {
         backgroundColor: colors.secondaryHover,
         borderColor: colors.secondaryHover
+      }
+    },
+    ternaryWithBg: {
+      color: colors.white,
+      backgroundColor: colors.ternary,
+      borderColor: colors.ternary,
+      '&:hover': {
+        backgroundColor: colors.ternaryHover,
+        borderColor: colors.ternaryHover
       }
     },
     warningWithBg: {

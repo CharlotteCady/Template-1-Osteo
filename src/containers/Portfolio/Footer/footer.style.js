@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const FooterWrapper = styled.footer`
   position: relative;
   overflow: hidden;
-  background-color: #1b1e25;
+  background-color: ${props => props.theme.colors.secondary};
   padding: 100px 0;
   color: #fff;
   @media (max-width: 990px) {
@@ -61,7 +61,7 @@ export const Newsletter = styled.div`
   }
   .reusecore__button {
     font-weight: 700;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
   }
 `;
 
@@ -86,7 +86,7 @@ export const FooterNavItem = styled.li`
     font-size: 14px;
     transition: 0.15s ease-in-out;
     &:hover {
-      color: #3444f1;
+      color: ${props => props.theme.colors.primary};
     }
   }
 `;
