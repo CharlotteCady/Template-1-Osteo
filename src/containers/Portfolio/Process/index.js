@@ -107,7 +107,7 @@ ProcessSection.defaultProps = {
     ml: "auto",
     mr: "auto",
     mb: "35px",
-    height: "150px"
+    height: "130px"
   },
   processTitleStyle: {
     fontSize: ["20px", "18px", "20px", "20px", "20px"],

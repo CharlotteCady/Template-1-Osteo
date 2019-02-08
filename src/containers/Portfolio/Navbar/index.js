@@ -70,7 +70,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
                 href="#contact_section"
                 className="navbar_drawer_button"
               >
-                <Button {...button} title="Prendre RDV" />
+                <Button {...button} title="Prendre RDV en ligne" />
               </AnchorLink>
             </Drawer>
           </Box>

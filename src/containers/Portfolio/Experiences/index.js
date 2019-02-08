@@ -115,7 +115,8 @@ ExperiencesSection.defaultProps = {
   learningRow: {
     flexBox: true,
     flexWrap: "wrap",
-    mt: ["20px", "30px", "70px", "80px", "110px"]
+    mt: ["20px", "30px", "70px", "80px", "90px"],
+    mb: "40px"
   },
   learningContentArea: {
     width: ["100%", "100%", "50%", "50%", "50%"],

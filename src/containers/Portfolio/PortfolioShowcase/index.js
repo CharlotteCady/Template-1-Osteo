@@ -14,7 +14,6 @@ import GlideSlide from "../../../components/GlideCarousel/glideSlide";
 import {
   PortfolioShowcaseWrapper,
   PortfolioShowcaseItem,
-  PortfolioLink,
   BuiltWith,
   PortfolioMeta,
   MetaItem
@@ -190,8 +189,8 @@ PortfolioShowcase.propTypes = {
 
 PortfolioShowcase.defaultProps = {
   sectionWrapper: {
-    pt: ["60px", "80px", "100px", "110px", "150px"],
-    pb: ["60px", "80px", "100px", "110px", "150px"]
+    pt: ["60px", "80px", "100px", "90px", "130px"],
+    pb: ["60px", "80px", "100px", "90px", "130px"]
   },
   secTitleWrapper: {
     width: ["100%", "100%", "60%", "50%", "50%"],

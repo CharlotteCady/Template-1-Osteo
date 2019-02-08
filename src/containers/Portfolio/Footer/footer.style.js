@@ -4,21 +4,21 @@ export const FooterWrapper = styled.footer`
   position: relative;
   overflow: hidden;
   background-color: ${props => props.theme.colors.secondary};
-  padding: 100px 0;
+  padding: 50px 0 0 0;
   color: #fff;
   @media (max-width: 990px) {
-    padding: 80px 0;
+    padding: 80px 0 0 0;
   }
   @media (max-width: 767px) {
-    padding: 70px 0 50px 0;
+    padding: 70px 0 0px 0;
   }
   @media (max-width: 575px) {
     padding: 70px 0 0 0;
   }
 
   .heart_sign {
-    color: #ed1225;
-    margin-left: 10px;
+    color: ${props => props.theme.colors.ternary};
+    margin: 0 10px;
   }
 
   .footer_social {
@@ -33,6 +33,9 @@ export const FooterWrapper = styled.footer`
           height: 25px;
         }
       }
+    }
+    &.footer_social_center {
+      justify-content: center;
     }
   }
 `;
@@ -69,6 +72,7 @@ export const FooterNav = styled.ul`
   margin: 0;
   padding: 0;
   margin-left: auto;
+  text-align: center;
   @media (max-width: 575px) {
     margin-left: 0;
   }

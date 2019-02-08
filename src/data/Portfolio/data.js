@@ -4,16 +4,13 @@ import { socialDribbbleOutline } from "react-icons-kit/ionicons/socialDribbbleOu
 import { socialGithub } from "react-icons-kit/ionicons/socialGithub";
 import { socialGoogleplusOutline } from "react-icons-kit/ionicons/socialGoogleplusOutline";
 
-import Awardee1 from "../../assets/image/portfolio/awardee-1.png";
-import Awardee2 from "../../assets/image/portfolio/awardee-2.png";
-import Awardee3 from "../../assets/image/portfolio/awardee-3.png";
-import Awardee4 from "../../assets/image/portfolio/awardee-4.png";
-import AwardImage1 from "../../assets/image/portfolio/award-1.png";
-import AwardImage2 from "../../assets/image/portfolio/award-2.png";
-import AwardImage3 from "../../assets/image/portfolio/award-3.png";
-import AwardImage4 from "../../assets/image/portfolio/award-4.png";
+import Bouche from "../../assets/image/portfolio/bouche.svg";
+import Poumons from "../../assets/image/portfolio/poumons.svg";
+import Estomac from "../../assets/image/portfolio/estomac.svg";
+import Squelette from "../../assets/image/portfolio/squelette.svg";
+import Cerveau from "../../assets/image/portfolio/cerveau.svg";
+import Urethra from "../../assets/image/portfolio/urethra.svg";
 
-import PortfolioImage1 from "../../assets/image/portfolio/portfolio-1.jpg";
 import BebeImage from "../../assets/image/portfolio/bebe.jpg";
 import EnfantImage from "../../assets/image/portfolio/enfant.jpeg";
 import EnceinteImage from "../../assets/image/portfolio/enceinte.jpg";
@@ -90,36 +87,39 @@ export const MENU_ITEMS = [
 
 export const AWARDS = [
   {
-    awardLogo: AwardImage1,
-    awardName: "Free Software Advice",
-    awardDetails: "Top Rated App Development Companies USA",
-    awardeeLogo: Awardee1,
-    awardeeName: "Awardee",
-    date: "The Jury 2018"
+    awardLogo: Squelette,
+    awardName: "L'appareil locomoteur",
+    awardDetails:
+      "Cervicalgie, torticoli, dorsalgie, douleur intercostale, lumbago, névralgie, entorse, accident musculaire, tendinite, séquelles d'accident, mal de tête d’origine mécanique, etc."
   },
   {
-    awardLogo: AwardImage2,
-    awardName: "Free Software Advice",
-    awardDetails: "Top Rated App Development Companies USA",
-    awardeeLogo: Awardee2,
-    awardeeName: "Awardee",
-    date: "The Jury 2018"
+    awardLogo: Cerveau,
+    awardName: "Le système nerveux et vasculaire",
+    awardDetails:
+      "Névralgies, troubles du retour veineux, troubles de l'humeur, prise en charge des maladies neurodégénératives, etc."
   },
   {
-    awardLogo: AwardImage3,
-    awardName: "Free Software Advice",
-    awardDetails: "Top Rated App Development Companies USA",
-    awardeeLogo: Awardee3,
-    awardeeName: "Awardee",
-    date: "The Jury 2018"
+    awardLogo: Estomac,
+    awardName: "Le système digestif",
+    awardDetails:
+      "Ballonements, brûlures d'estomac, diarrhée, constipation, régurgitations, nausées, etc."
   },
   {
-    awardLogo: AwardImage4,
-    awardName: "Free Software Advice",
-    awardDetails: "Top Rated App Development Companies USA",
-    awardeeLogo: Awardee4,
-    awardeeName: "Awardee",
-    date: "The Jury 2018"
+    awardLogo: Urethra,
+    awardName: "Le système génito-urinaire",
+    awardDetails:
+      "Cystites chroniques, enurésie, prévention des infections urinaires, suivi de la grossesse, règles irrégulières ou douloureuses, etc."
+  },
+  {
+    awardLogo: Bouche,
+    awardName: "La bouche et la sphère ORL",
+    awardDetails:
+      "Otites, acouphènes, rhinites, sinusites, conjonctivites, vertiges fonctionnels, etc."
+  },
+  {
+    awardLogo: Poumons,
+    awardName: "Le système respiratoire",
+    awardDetails: "Asthme, prévention des bronchites répétitives."
   }
 ];
 
@@ -441,15 +441,7 @@ export const TESTIMONIAL = [
 
 export const FOOTER_MENU = [
   {
-    label: "Contact",
-    path: "#"
-  },
-  {
-    label: "Privacy",
-    path: "#"
-  },
-  {
-    label: "Cookie Policy",
+    label: "Mentions légales",
     path: "#"
   }
 ];

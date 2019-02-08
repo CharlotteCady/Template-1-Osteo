@@ -4,6 +4,7 @@ export const SocialProfileWrapper = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+  align-items: center;
   flex-wrap: wrap;
 `;
 

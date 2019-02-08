@@ -185,8 +185,8 @@ export const ContentWrapper = styled.div`
       margin-right: 40px;
       li {
         display: inline-block;
-        padding-left: 13px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
         &:first-child {
           padding-left: 0;
         }
@@ -205,7 +205,7 @@ export const ContentWrapper = styled.div`
         }
         a {
           padding: 5px;
-          font-size: 16px;
+          font-size: 15px;
           font-weight: 700;
           color: #fff;
           position: relative;
