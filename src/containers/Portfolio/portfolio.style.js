@@ -117,7 +117,53 @@ export const GlobalStyle = createGlobalStyle`
       }
     }
   }
-  
+  /* Modal default style */
+  button.modalCloseBtn {
+    color: ${props => props.theme.colors.primary};
+    &.alt {
+      background-color: ${props => props.theme.colors.primary};
+      box-shadow: 0 8px 38px ${props => props.theme.colors.primary};
+    }
+  }
+  .reuseModalHolder {
+    border: 0;
+    background-color: transparent;
+    &.search-modal,
+    &.video-modal {
+      position: fixed !important;
+      z-index: 9999;
+      background-color: rgba(000, 000, 000, 0.5);
+      overflow-y: auto;
+      .innerRndComponent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        iframe {
+          max-width: 700px;
+          max-height: 380px;
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+        }
+      }
+    }
+    &.demo_switcher_modal {
+      border: 0;
+      background-color: rgba(16, 30, 77, 0.8);
+      .innerRndComponent {
+        border-radius: 8px;
+      }
+    }
+    &.video-modal {
+      background-color: transparent;
+    }
+    .innerRndComponent {
+      padding-right: 0;
+    }
+  }
+  .reuseModalCloseBtn {
+    cursor: pointer;
+  }
 `;
 
 export const ContentWrapper = styled.div`

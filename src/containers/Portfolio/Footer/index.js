@@ -1,19 +1,61 @@
 import React from "react";
-import Link from "next/link";
 import PropTypes from "prop-types";
 import { Icon } from "react-icons-kit";
 import Box from "reusecore/src/elements/Box";
 import Text from "reusecore/src/elements/Text";
+import Button from "reusecore/src/elements/Button";
+
 import Container from "../../../components/UI/Container";
 import SocialProfile from "../SocialProfile";
+import { openModal, closeModal } from "@redq/reuse-modal";
 
 import { FooterWrapper, FooterNav, FooterNavItem } from "./footer.style";
 import { FOOTER_MENU } from "../../../data/Portfolio/data";
 import { SOCIAL_PROFILES } from "../../../data/Portfolio/data";
 import { heart } from "react-icons-kit/fa/heart";
+import { ic_clear } from "react-icons-kit/md/ic_clear";
 import colors from "../../../theme/portfolio/colors";
+import LoginModal from "../../LoginModal/index";
+
+// Default close button for modal
+const CloseModalButton = () => (
+  // <button
+  //   className="modalCloseBtn"
+  //   variant="fab"
+  //   onClick={() => closeModal()}
+  // >
+  // <Icon icon={ic_clear}/>
+  // </button>
+  <Button
+    className="modalCloseBtn"
+    variant="fab"
+    onClick={() => closeModal()}
+    title="x"
+  />
+);
 
 const Footer = ({ row, col, linkStyle, copyrightStyle, azertyStudio }) => {
+  // Search modal handler
+  const handleModal = () => {
+    openModal({
+      config: {
+        className: "search-modal",
+        disableDragging: true,
+        default: {
+          width: "100%",
+          height: "100%",
+          x: 0,
+          y: 0,
+          position: "fixed"
+        }
+      },
+      component: LoginModal,
+      componentProps: {},
+      closeComponent: CloseModalButton,
+      closeOnClickOutside: true
+    });
+  };
+
   return (
     <FooterWrapper>
       <Container noGutter mobileGutter width="1200px">
@@ -32,9 +74,11 @@ const Footer = ({ row, col, linkStyle, copyrightStyle, azertyStudio }) => {
             <FooterNav>
               {FOOTER_MENU.map((item, index) => (
                 <FooterNavItem key={`footer-nav-item-${index}`}>
-                  <Link href={item.path || "#"}>
-                    <a>{item.label}</a>
-                  </Link>
+                  <Button
+                    variant="textButton"
+                    onClick={handleModal}
+                    title={item.label}
+                  />
                 </FooterNavItem>
               ))}
             </FooterNav>
