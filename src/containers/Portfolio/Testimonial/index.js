@@ -1,66 +1,57 @@
-import React from 'react';
-import Link from 'next/link';
-import PropTypes from 'prop-types';
-import { Icon } from 'react-icons-kit';
-import Box from 'reusecore/src/elements/Box';
-import Text from 'reusecore/src/elements/Text';
-import Heading from 'reusecore/src/elements/Heading';
-import Image from 'reusecore/src/elements/Image';
-import Container from '../../../components/UI/Container';
-import GlideCarousel from '../../../components/GlideCarousel';
-import GlideSlide from '../../../components/GlideCarousel/glideSlide';
+import React from "react";
+import { Icon } from "react-icons-kit";
+import PropTypes from "prop-types";
+import Box from "reusecore/src/elements/Box";
+import Text from "reusecore/src/elements/Text";
+import Heading from "reusecore/src/elements/Heading";
+import Container from "../../../components/UI/Container";
+import GlideCarousel from "../../../components/GlideCarousel";
+import GlideSlide from "../../../components/GlideCarousel/glideSlide";
 
 import {
   PrevButton,
-  NextButton,
-} from '../../../containers/Portfolio/portfolio.style';
+  NextButton
+} from "../../../containers/Portfolio/portfolio.style";
 import {
   TestimonialWrapper,
   TestimonialItem,
-  TestimonialHead,
-  TestimonialThumb,
-} from './testimonial.style';
-import { TESTIMONIAL } from '../../../data/Portfolio/data';
-import { twitter } from 'react-icons-kit/icomoon/twitter';
+  TestimonialHead
+} from "./testimonial.style";
+import { TESTIMONIAL } from "../../../data/Portfolio/data";
+import { starFull } from "react-icons-kit/icomoon/starFull";
 
 const TestimonialSection = ({
   sectionWrapper,
   secTitleWrapper,
   secTitle,
-  secDescription,
   reviewStyle,
-  nameStyle,
-  designationStyle,
+  nameStyle
 }) => {
   //Carousel Options
   const carouselOptions = {
-    type: 'carousel',
+    type: "carousel",
     autoplay: 6000,
     perView: 3,
     gap: 28,
     animationDuration: 800,
     breakpoints: {
       990: {
-        perView: 3,
+        perView: 3
       },
       767: {
-        perView: 2,
+        perView: 2
       },
       500: {
-        perView: 1,
-      },
-    },
+        perView: 1
+      }
+    }
   };
 
   return (
     <Box {...sectionWrapper} as="section">
       <Container noGutter mobileGutter width="1200px">
         <Box {...secTitleWrapper}>
-          <Heading {...secTitle} content="What My Clients Say?" />
-          <Text
-            {...secDescription}
-            content="Lorem ipsum dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incid idunt ut labore"
-          />
+          <Heading {...secTitle} content="Ce que disent mes patients" />
         </Box>
         <TestimonialWrapper>
           <GlideCarousel
@@ -82,28 +73,21 @@ const TestimonialSection = ({
                 <GlideSlide key={`testimonial-item-${index}`}>
                   <TestimonialItem>
                     <TestimonialHead>
-                      <TestimonialThumb>
-                        <Image
-                          src={item.image}
-                          alt={`testimonial-avatar-${index + 1}`}
-                        />
-                      </TestimonialThumb>
-                      <Link href={item.twitterProfile || '#'}>
-                        <a>
-                          <Icon icon={twitter} size={24} />
-                        </a>
-                      </Link>
+                      <Icon
+                        icon={item.icon || starFull}
+                        size={item.iconSize || 12}
+                      />
+                      <Icon
+                        icon={item.icon || starFull}
+                        size={item.iconSize || 12}
+                      />
+                      <Icon
+                        icon={item.icon || starFull}
+                        size={item.iconSize || 12}
+                      />
                     </TestimonialHead>
                     <Text {...reviewStyle} content={item.review} />
                     <Heading as="h3" content={item.name} {...nameStyle} />
-                    <Text
-                      as="span"
-                      content={item.designation}
-                      {...designationStyle}
-                    />
-                    <Link href={item.organizationURL || '#'}>
-                      <a className="reviewer_org">{item.organization}</a>
-                    </Link>
                   </TestimonialItem>
                 </GlideSlide>
               ))}
@@ -122,50 +106,37 @@ TestimonialSection.propTypes = {
   secDescription: PropTypes.object,
   reviewStyle: PropTypes.object,
   nameStyle: PropTypes.object,
-  designationStyle: PropTypes.object,
+  designationStyle: PropTypes.object
 };
 
 TestimonialSection.defaultProps = {
   sectionWrapper: {
-    pt: ['60px', '80px', '100px', '110px', '150px'],
-    pb: '50px',
+    pt: ["60px", "80px", "100px", "110px", "150px"],
+    pb: "50px"
   },
   secTitleWrapper: {
-    mb: ['90px', '90px', '50px', '50px', '50px'],
+    mb: ["90px", "90px", "50px", "50px", "50px"]
   },
   secTitle: {
-    fontSize: ['22px', '26px', '26px', '30px', '30px'],
-    fontWeight: '700',
-    color: '#302b4e',
-    lineHeight: '1.34',
-    mb: ['15px', '18px', '18px', '20px', '20px'],
-  },
-  secDescription: {
-    fontSize: ['15px', '16px'],
-    fontWeight: '400',
-    color: '#43414e',
-    lineHeight: '1.5',
-    width: '530px',
-    maxWidth: '100%',
-    mb: '0',
+    fontSize: ["22px", "26px", "26px", "30px", "30px"],
+    fontWeight: "700",
+    color: "#302b4e",
+    lineHeight: "1.34",
+    mb: ["15px", "18px", "18px", "20px", "20px"]
   },
   reviewStyle: {
-    fontSize: '16px',
-    color: '#43414e',
-    lineHeight: '1.5',
-    mb: '30px',
+    fontSize: "16px",
+    fontWeight: 300,
+    color: "#43414e",
+    lineHeight: "1.5",
+    mb: "30px"
   },
   nameStyle: {
-    fontSize: '16px',
-    color: '#302b4e',
-    fontWeight: '600',
-    mb: '7px',
-  },
-  designationStyle: {
-    fontSize: '14px',
-    color: '#43414e',
-    mb: '0',
-  },
+    fontSize: "16px",
+    color: "#302b4e",
+    fontWeight: "600",
+    mb: "7px"
+  }
 };
 
 export default TestimonialSection;

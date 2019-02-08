@@ -3,6 +3,7 @@ import {
   space,
   borders,
   borderColor,
+  background,
   width,
   minWidth,
   maxWidth,
@@ -15,6 +16,7 @@ import {
   order,
   alignSelf,
   color,
+  textAlign,
   compose
 } from 'styled-system';
 
@@ -36,7 +38,9 @@ export const base = compose(
   alignSelf,
   borders,
   borderColor,
-  display
+  background,
+  display,
+  textAlign
 );
 
 base.propTypes = {
@@ -44,6 +48,7 @@ base.propTypes = {
   ...space.propTypes,
   ...borders.propTypes,
   ...borderColor.propTypes,
+  ...background.propTypes,
   ...width.propTypes,
   ...height.propTypes,
   ...fontSize.propTypes,

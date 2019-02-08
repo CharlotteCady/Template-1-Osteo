@@ -97,10 +97,12 @@ Button.propTypes = {
   colors: PropTypes.oneOf([
     'primary',
     'secondary',
+    'ternary',
     'warning',
     'error',
     'primaryWithBg',
     'secondaryWithBg',
+    'ternaryWithBg',
     'warningWithBg',
     'errorWithBg'
   ]),

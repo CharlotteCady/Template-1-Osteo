@@ -1,20 +1,20 @@
-import React, { useContext } from 'react';
-import Link from 'next/link';
-import PropTypes from 'prop-types';
-import NavbarWrapper from 'reusecore/src/elements/Navbar';
-import Drawer from 'reusecore/src/elements/Drawer';
-import Button from 'reusecore/src/elements/Button';
-import Logo from 'reusecore/src/elements/UI/Logo';
-import Box from 'reusecore/src/elements/Box';
-import HamburgMenu from '../../../components/HamburgMenu';
-import Container from '../../../components/UI/Container';
-import { DrawerContext } from '../../../contexts/DrawerContext';
+import React, { useContext } from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import PropTypes from "prop-types";
+import NavbarWrapper from "reusecore/src/elements/Navbar";
+import Drawer from "reusecore/src/elements/Drawer";
+import Button from "reusecore/src/elements/Button";
+import Logo from "reusecore/src/elements/UI/Logo";
+import Box from "reusecore/src/elements/Box";
+import HamburgMenu from "../../../components/HamburgMenu";
+import Container from "../../../components/UI/Container";
+import { DrawerContext } from "../../../contexts/DrawerContext";
 
-import { MENU_ITEMS } from '../../../data/Portfolio/data';
-import ScrollSpyMenu from '../../../components/ScrollSpyMenu';
-
-import LogoImage from '../../../assets/image/portfolio/logo.png';
-import LogoImageAlt from '../../../assets/image/portfolio/logo-alt.png';
+import { MENU_ITEMS } from "../../../data/Portfolio/data";
+import ScrollSpyMenu from "../../../components/ScrollSpyMenu";
+import LogoImage from "../../../assets/image/portfolio/logo.svg";
+import LogoImageAlt from "../../../assets/image/portfolio/logo-alt.svg";
+import colors from "../../../theme/portfolio/colors";
 
 const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
   const { state, dispatch } = useContext(DrawerContext);
@@ -22,7 +22,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
   // Toggle drawer
   const toggleHandler = () => {
     dispatch({
-      type: 'TOGGLE',
+      type: "TOGGLE"
     });
   };
 
@@ -50,15 +50,13 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
               menuItems={MENU_ITEMS}
               offset={-70}
             />
-            <Link href="#">
-              <a className="navbar_button">
-                <Button {...button} title="LET'S TALK" />
-              </a>
-            </Link>
+            <AnchorLink href="#contact_section" className="navbar_button">
+              <Button {...button} title="PRENDRE RDV" />
+            </AnchorLink>
             <Drawer
               width="420px"
               placement="right"
-              drawerHandler={<HamburgMenu barColor="#3444f1" />}
+              drawerHandler={<HamburgMenu barColor={colors.primary} />}
               open={state.isOpen}
               toggleHandler={toggleHandler}
             >
@@ -68,11 +66,12 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
                 drawerClose={true}
                 offset={-100}
               />
-              <Link href="#">
-                <a className="navbar_drawer_button">
-                  <Button {...button} title="LET'S TALK" />
-                </a>
-              </Link>
+              <AnchorLink
+                href="#contact_section"
+                className="navbar_drawer_button"
+              >
+                <Button {...button} title="Prendre RDV en ligne" />
+              </AnchorLink>
             </Drawer>
           </Box>
         </Box>
@@ -86,36 +85,35 @@ Navbar.propTypes = {
   logoStyle: PropTypes.object,
   button: PropTypes.object,
   row: PropTypes.object,
-  menuWrapper: PropTypes.object,
+  menuWrapper: PropTypes.object
 };
 
 Navbar.defaultProps = {
   navbarStyle: {
-    className: 'hosting_navbar',
-    minHeight: '70px',
-    display: 'block',
+    className: "hosting_navbar",
+    minHeight: "70px",
+    display: "block"
   },
   row: {
     flexBox: true,
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    width: '100%',
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "100%"
   },
   logoStyle: {
-    maxWidth: ['120px', '130px'],
+    maxHeight: ["40px"]
   },
   button: {
-    type: 'button',
-    fontSize: '16px',
-    pl: '0',
-    pr: '0',
-    colors: 'primary',
-    minHeight: 'auto',
+    type: "button",
+    fontSize: "16px",
+    pl: "0",
+    pr: "0",
+    minHeight: "auto"
   },
   menuWrapper: {
     flexBox: true,
-    alignItems: 'center',
-  },
+    alignItems: "center"
+  }
 };
 
 export default Navbar;

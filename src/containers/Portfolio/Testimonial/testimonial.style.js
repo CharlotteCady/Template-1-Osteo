@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const TestimonialWrapper = styled.div`
   .glide__track {
@@ -35,23 +35,16 @@ export const TestimonialItem = styled.div`
 
   .reviewer_org {
     font-size: 14px;
-    color: #3444f1;
+    color: ${props => props.theme.colors.primary};
     margin-left: 0.4em;
   }
 `;
 
 export const TestimonialHead = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 25px;
-
-  a {
-    color: #d6d7e2;
-    transition: 0.15s ease-in-out;
-    &:hover {
-      color: #38a1f3;
-    }
-  }
+  color: ${props => props.theme.colors.primary};
 `;
 
 export const TestimonialThumb = styled.div`

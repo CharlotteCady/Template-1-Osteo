@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const AwardSectionWrapper = styled.section`
   padding: 150px 0;
@@ -36,13 +36,14 @@ export const AwardItem = styled.div`
   padding: 50px 30px;
   background: #fff;
   border-radius: 10px;
+  min-height: 413px;
   @media (max-width: 1200px) {
     padding: 40px 20px;
   }
 
   img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     display: block;
   }
 `;
@@ -55,7 +56,8 @@ export const AwardeeWrapper = styled.div`
 `;
 
 export const AwardImageWrapper = styled.div`
-  min-height: 97px;
+  height: 60px;
+  margin-bottom: 20px;
 `;
 
 export const AwardeeLogo = styled.div`

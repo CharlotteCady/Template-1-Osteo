@@ -1,6 +1,6 @@
-import styled, { createGlobalStyle } from 'styled-components';
-import { themeGet } from 'styled-system';
-import Line from '../../assets/image/portfolio/dotted-line.png';
+import styled, { createGlobalStyle } from "styled-components";
+import { themeGet } from "styled-system";
+import Line from "../../assets/image/portfolio/dotted-line.png";
 
 export const GlobalStyle = createGlobalStyle`
   body{
@@ -48,7 +48,7 @@ export const GlobalStyle = createGlobalStyle`
           a{
             font-size: 20px;
             font-weight: 500;
-            color: #343d48;
+            color: ${props => props.theme.colors.linkNavColor};;
             position: relative;
             font-family: 'Raleway', sans-serif;
             transition: 0.15s ease-in-out;
@@ -67,7 +67,7 @@ export const GlobalStyle = createGlobalStyle`
               position: absolute;
               width: calc(100% - 8px);
               height: 11px;
-              background: #c2c7fb;
+              background: ${props => props.theme.colors.navColor};
               bottom: 2px;
               left: -4px;
               z-index: -1;
@@ -111,13 +111,59 @@ export const GlobalStyle = createGlobalStyle`
         content: '\f10b';
         font-family: Flaticon;
         font-size: 26px;
-        color: #3444f1;
+        color: ${props => props.theme.colors.primary};
         transform: rotate(45deg);
         display: block;
       }
     }
   }
-  
+  /* Modal default style */
+  button.modalCloseBtn {
+    color: ${props => props.theme.colors.primary};
+    &.alt {
+      background-color: ${props => props.theme.colors.primary};
+      box-shadow: 0 8px 38px ${props => props.theme.colors.primary};
+    }
+  }
+  .reuseModalHolder {
+    border: 0;
+    background-color: transparent;
+    &.search-modal,
+    &.video-modal {
+      position: fixed !important;
+      z-index: 9999;
+      background-color: rgba(000, 000, 000, 0.5);
+      overflow-y: auto;
+      .innerRndComponent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        iframe {
+          max-width: 700px;
+          max-height: 380px;
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+        }
+      }
+    }
+    &.demo_switcher_modal {
+      border: 0;
+      background-color: rgba(16, 30, 77, 0.8);
+      .innerRndComponent {
+        border-radius: 8px;
+      }
+    }
+    &.video-modal {
+      background-color: transparent;
+    }
+    .innerRndComponent {
+      padding-right: 0;
+    }
+  }
+  .reuseModalCloseBtn {
+    cursor: pointer;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -139,15 +185,15 @@ export const ContentWrapper = styled.div`
 
   .portfolio_button {
     border-radius: 0;
-    border: 2px solid ${themeGet('colors.borderColor', '#1b1e25')};
+    border: 2px solid ${themeGet("colors.borderColor")};
     background-color: transparent;
     position: relative;
     min-height: 50px;
     text-transform: initial;
     transition: 0.2s ease-in-out;
     &:before {
-      content: '';
-      background-color: ${themeGet('colors.primary', '#3444f1')};
+      content: "";
+      background-color: ${themeGet("colors.primary")};
       position: absolute;
       width: calc(100% + 4px);
       height: calc(100% + 4px);
@@ -185,8 +231,8 @@ export const ContentWrapper = styled.div`
       margin-right: 40px;
       li {
         display: inline-block;
-        padding-left: 13px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
         &:first-child {
           padding-left: 0;
         }
@@ -205,11 +251,11 @@ export const ContentWrapper = styled.div`
         }
         a {
           padding: 5px;
-          font-size: 16px;
+          font-size: 15px;
           font-weight: 700;
           color: #fff;
           position: relative;
-          font-family: 'Raleway', sans-serif;
+          font-family: "Raleway", sans-serif;
           transition: 0.15s ease-in-out;
           &:hover {
             color: #fff;
@@ -220,11 +266,11 @@ export const ContentWrapper = styled.div`
             }
           }
           &:after {
-            content: '';
+            content: "";
             position: absolute;
             width: calc(100% - 8px);
             height: 11px;
-            background: #3444f1;
+            background: ${props => props.theme.colors.navColor};
             bottom: 6px;
             left: 0;
             z-index: -1;
@@ -240,7 +286,7 @@ export const ContentWrapper = styled.div`
     }
     .navbar_button {
       button {
-        font-family: 'Raleway', sans-serif;
+        font-family: "Raleway", sans-serif;
         font-weight: 700;
       }
       @media (max-width: 990px) {
@@ -263,9 +309,9 @@ export const ContentWrapper = styled.div`
       .main_menu {
         li {
           a {
-            color: #302b4e;
+            color: ${props => props.theme.colors.headingColor};
             &:after {
-              background: #c2c7fb;
+              background: ${props => props.theme.colors.navColorActive};
             }
           }
         }
@@ -278,7 +324,7 @@ export const ContentWrapper = styled.div`
     &:nth-child(3) {
       .process_item {
         &:before {
-          content: '';
+          content: "";
           background-image: url(${Line});
           width: 165px;
           height: 35px;
@@ -314,7 +360,7 @@ export const PrevButton = styled.div`
   cursor: pointer;
   &:hover {
     span {
-      background: #3444f1;
+      background: ${props => props.theme.colors.primaryHover};
       @media (min-width: 991px) {
         width: 100px;
       }
@@ -323,13 +369,13 @@ export const PrevButton = styled.div`
   span {
     width: 18px;
     height: 2px;
-    background: #d1d3de;
+    background: ${props => props.theme.colors.bgButton};
     display: block;
     position: relative;
     transition: 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     &:before,
     &:after {
-      content: '';
+      content: "";
       display: block;
       height: 2px;
       border-radius: 2px;
@@ -357,7 +403,7 @@ export const NextButton = styled.div`
   cursor: pointer;
   &:hover {
     span {
-      background: #3444f1;
+      background: ${props => props.theme.colors.primaryHover};
       @media (min-width: 991px) {
         width: 100px;
       }
@@ -366,13 +412,13 @@ export const NextButton = styled.div`
   span {
     width: 18px;
     height: 2px;
-    background: #d1d3de;
+    background: ${props => props.theme.colors.bgButton};
     display: block;
     position: relative;
     transition: 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     &:before,
     &:after {
-      content: '';
+      content: "";
       display: block;
       height: 2px;
       border-radius: 2px;
