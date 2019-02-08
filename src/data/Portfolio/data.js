@@ -21,14 +21,13 @@ import SportifImage from "../../assets/image/portfolio/sportif.jpeg";
 import AdulteImage from "../../assets/image/portfolio/adulte.jpeg";
 import SeniorImage from "../../assets/image/portfolio/senior.jpg";
 
-import Step1 from "../../assets/image/portfolio/step-1.png";
-import Step2 from "../../assets/image/portfolio/step-2.png";
-import Step3 from "../../assets/image/portfolio/step-3.png";
+import Step1 from "../../assets/image/portfolio/doctor.svg";
+import Step2 from "../../assets/image/portfolio/pain.svg";
+import Step3 from "../../assets/image/portfolio/treatment.svg";
 
-import SkillIcon1 from "../../assets/image/portfolio/skill-1.svg";
-import SkillIcon2 from "../../assets/image/portfolio/skill-2.svg";
-import SkillIcon3 from "../../assets/image/portfolio/skill-3.svg";
-import SkillIcon4 from "../../assets/image/portfolio/skill-4.svg";
+import AdultImage from "../../assets/image/portfolio/girl.svg";
+import StudentImage from "../../assets/image/portfolio/student.svg";
+import TransportImage from "../../assets/image/portfolio/domicile.svg";
 
 import Client1 from "../../assets/image/portfolio/client-1.png";
 import Client2 from "../../assets/image/portfolio/client-2.png";
@@ -63,6 +62,11 @@ export const MENU_ITEMS = [
     offset: "0"
   },
   {
+    label: "QUI SUIS-JE ?",
+    path: "#experiences_section",
+    offset: "0"
+  },
+  {
     label: "C'EST POUR QUI ?",
     path: "#portfolio_section",
     offset: "0"
@@ -79,12 +83,7 @@ export const MENU_ITEMS = [
   },
   {
     label: "TARIFS",
-    path: "#process_section",
-    offset: "0"
-  },
-  {
-    label: "AVIS",
-    path: "#process_section",
+    path: "#skills_section",
     offset: "0"
   }
 ];
@@ -133,12 +132,6 @@ export const PORTFOLIO_SHOWCASE = [
         description:
           "Le but d’une consultation ostéopathique chez le nouveau-né et le bébé est de rétablir un équilibre physique parfois perturbé lors de la vie intra-utérine ou de l’accouchement.",
         image: BebeImage,
-        // link: "#",
-        // featuredIn: "AWWWARDS",
-        // featuredLink: "#",
-        // view: "4.5K",
-        // love: "1.5K",
-        // feedback: "1.2K",
         buildWith: [
           {
             content: "Pleurs inexpliqués"
@@ -170,12 +163,6 @@ export const PORTFOLIO_SHOWCASE = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend aliquet dui, eget ultricies orci volutpat ac. Quisque vitae velit eget lorem consequat vehicula posuere venenatis nulla.",
         image: EnfantImage,
-        // link: "#",
-        // featuredIn: "AWWWARDS",
-        // featuredLink: "#",
-        // view: "4.5K",
-        // love: "1.5K",
-        // feedback: "1.2K",
         buildWith: [
           {
             content: "Douleurs de dos"
@@ -207,12 +194,6 @@ export const PORTFOLIO_SHOWCASE = [
         description:
           "Le but du travail de l’ostéopathe est d’équilibrer les changements morphologiques et toutes leurs conséquences viscérales, articulaires et fonctionnelles. Les techniques utilisées sont douces et adaptées à la patiente.",
         image: EnceinteImage,
-        // link: "#",
-        // featuredIn: "AWWWARDS",
-        // featuredLink: "#",
-        // view: "4.5K",
-        // love: "1.5K",
-        // feedback: "1.2K",
         buildWith: [
           {
             content: "Douleur thoracique"
@@ -247,12 +228,6 @@ export const PORTFOLIO_SHOWCASE = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend aliquet dui, eget ultricies orci volutpat ac. Quisque vitae velit eget lorem consequat vehicula posuere venenatis nulla.",
         image: AdulteImage,
-        // link: "#",
-        // featuredIn: "AWWWARDS",
-        // featuredLink: "#",
-        // view: "4.5K",
-        // love: "1.5K",
-        // feedback: "1.2K",
         buildWith: [
           {
             content: "Troubles du sommeil"
@@ -284,12 +259,6 @@ export const PORTFOLIO_SHOWCASE = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend aliquet dui, eget ultricies orci volutpat ac. Quisque vitae velit eget lorem consequat vehicula posuere venenatis nulla.",
         image: SportifImage,
-        // link: "#",
-        // featuredIn: "AWWWARDS",
-        // featuredLink: "#",
-        // view: "4.5K",
-        // love: "1.5K",
-        // feedback: "1.2K",
         buildWith: [
           {
             content: "Entorse"
@@ -327,12 +296,6 @@ export const PORTFOLIO_SHOWCASE = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend aliquet dui, eget ultricies orci volutpat ac. Quisque vitae velit eget lorem consequat vehicula posuere venenatis nulla.",
         image: SeniorImage,
-        // link: "#",
-        // featuredIn: "AWWWARDS",
-        // featuredLink: "#",
-        // view: "4.5K",
-        // love: "1.5K",
-        // feedback: "1.2K",
         buildWith: [
           {
             content: "Raideurs"
@@ -352,91 +315,59 @@ export const PORTFOLIO_SHOWCASE = [
 export const PROCESS_STEPS = [
   {
     image: Step1,
-    title: "1. Research",
+    title: "1. L’anamnèse",
     description:
-      "We work with you to understand user’s stories and validate your idea with real users using lean design sprints."
+      "Permet de bien cibler la douleur, de connaitre les antécédents  du patient ainsi que ses habitudes de vie"
   },
   {
     image: Step2,
-    title: "2. Design",
+    title: "2. L'examen clinique",
     description:
-      "Expanding on the insights gained, you’ll work closely with our design team to create an elegant design"
+      "Permet de poser un diagnostic ostéopathique et de trouver avec précision la zone du corps douloureuse et les causes de cette douleur afin d’élaborer un plan de traitement."
   },
   {
     image: Step3,
-    title: "3. Build",
+    title: "3. Le traitement",
     description:
-      "With our scrum-based agile methodology, you’ll receive iterative builds every two weeks, which gives you "
+      "Propre à chaque patient, à ses antécédents et à son motif de consultation. J'utilise une grande diversité de techniques, toujours adaptées au patient et non traumatisantes. "
   }
 ];
 
 export const SERVICE_LIST = [
   {
-    title: "UI/UX Design",
+    title: "Expériences",
     listItems: [
       {
-        content: "Design Sprints"
+        content: "Ostéopathe au cabinet d'ostéopathie Durand à Nantes - 2017"
       },
       {
-        content: "User Research"
+        content: "Ostéopathe au cabinet d'ostéopathie Parmentier à Paris - 2015"
       },
       {
-        content: "Visual Design"
+        content: "Conférencier au séminaire des ostéopathes de Nantes - 2015"
       },
       {
-        content: "Mobile App Design"
-      },
-      {
-        content: "Tracking & Learning"
-      },
-      {
-        content: "Building Traction"
+        content: "Assistant de cours et de clinique - 2013"
       }
     ]
   },
   {
-    title: "Web Development",
+    title: "Formations",
     listItems: [
       {
-        content: "ReactJS"
+        content: "Diplôme 1"
       },
       {
-        content: "AngularJS"
+        content: "Diplôme 2"
       },
       {
-        content: "ASP.NET MVC"
+        content: "Formation 1"
       },
       {
-        content: "WordPress"
+        content: "Formation 2"
       },
       {
-        content: "NodeJS"
-      },
-      {
-        content: "GO"
-      }
-    ]
-  },
-  {
-    title: "Mobile App Development",
-    listItems: [
-      {
-        content: "iOS"
-      },
-      {
-        content: "Android"
-      },
-      {
-        content: "React Native"
-      },
-      {
-        content: "Ionic & Apache Cordova"
-      },
-      {
-        content: "NodeJS"
-      },
-      {
-        content: "3D & VR"
+        content: "Formation 3"
       }
     ]
   }
@@ -444,32 +375,19 @@ export const SERVICE_LIST = [
 
 export const SKILLS = [
   {
-    title: "Graphic Design",
-    description:
-      "Aristotle maintained the sharp distinction between science and the practical",
-    icon: SkillIcon1,
-    successRate: "90"
+    title: "60 euros",
+    description: "Adultes et enfants",
+    icon: AdultImage
   },
   {
-    title: "UI/UX Design",
-    description:
-      "Aristotle maintained the sharp distinction between science and the practical",
-    icon: SkillIcon2,
-    successRate: "85"
+    title: "50 euros",
+    description: "Étudiants",
+    icon: StudentImage
   },
   {
-    title: "Web Application",
-    description:
-      "Aristotle maintained the sharp distinction between science and the practical",
-    icon: SkillIcon3,
-    successRate: "80"
-  },
-  {
-    title: "Mobile Application",
-    description:
-      "Aristotle maintained the sharp distinction between science and the practical",
-    icon: SkillIcon4,
-    successRate: "70"
+    title: "70 euros",
+    description: "À domicile",
+    icon: TransportImage
   }
 ];
 
@@ -504,32 +422,20 @@ export const TESTIMONIAL = [
   {
     image: Reviewer1,
     review:
-      "Another quality React-based product from RedQ Team. Manage to turn highly complex tech into simple components.",
-    name: "Thomas Cruz",
-    designation: "Founder & CEO",
-    twitterProfile: "https://twitter.com/redqinc",
-    organization: "@Tonquin",
-    organizationURL: "https://redq.io/"
+      "Excellent ostéopathe, qui connaît parfaitement son métier ! Il a soulagé efficacement une douleur qui me pénalisait depuis plusieurs mois. Encore merci !",
+    name: "Philippe"
   },
   {
     image: Reviewer2,
     review:
-      "Another quality React-based product from RedQ Team. Manage to turn highly complex tech into simple components.",
-    name: "Marhta Robson",
-    designation: "Co-Founder & CTO",
-    twitterProfile: "https://twitter.com/redqinc",
-    organization: "@Tonquin",
-    organizationURL: "https://redq.io/"
+      "Très satisfaite de cet ostéopathe qui se met toujours à la portée de son patient. Il m'a remarquablement soigné là ou d'autres n'ont pas été aussi efficaces, je le recommande vivement.",
+    name: "Juliette"
   },
   {
     image: Reviewer3,
     review:
-      "Another quality React-based product from RedQ Team. Manage to turn highly complex tech into simple components.",
-    name: "Dexter Patterson",
-    designation: "Co-Founder & COO",
-    twitterProfile: "https://twitter.com/redqinc",
-    organization: "@Tonquin",
-    organizationURL: "https://redq.io/"
+      "Des mains en or. De la gentillesse, à l écoute. Que demander de plus. A recommander.",
+    name: "Christian"
   }
 ];
 

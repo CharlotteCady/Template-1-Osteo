@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Link from "next/link";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import PropTypes from "prop-types";
 import NavbarWrapper from "reusecore/src/elements/Navbar";
 import Drawer from "reusecore/src/elements/Drawer";
@@ -12,9 +12,8 @@ import { DrawerContext } from "../../../contexts/DrawerContext";
 
 import { MENU_ITEMS } from "../../../data/Portfolio/data";
 import ScrollSpyMenu from "../../../components/ScrollSpyMenu";
-import Band from "../../../assets/image/portfolio/band.svg";
-import LogoImage from "../../../assets/image/portfolio/logo.png";
-import LogoImageAlt from "../../../assets/image/portfolio/logo-alt.png";
+import LogoImage from "../../../assets/image/portfolio/logo.svg";
+import LogoImageAlt from "../../../assets/image/portfolio/logo-alt.svg";
 import colors from "../../../theme/portfolio/colors";
 
 const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
@@ -33,14 +32,14 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
         <Box {...row}>
           <Logo
             href="#"
-            logoSrc={Band}
+            logoSrc={LogoImage}
             title="Portfolio"
             logoStyle={logoStyle}
             className="main-logo"
           />
           <Logo
             href="#"
-            logoSrc={Band}
+            logoSrc={LogoImageAlt}
             title="Portfolio"
             logoStyle={logoStyle}
             className="logo-alt"
@@ -51,11 +50,9 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
               menuItems={MENU_ITEMS}
               offset={-70}
             />
-            <Link href="#">
-              <a className="navbar_button">
-                <Button {...button} title="PRENDRE RDV" />
-              </a>
-            </Link>
+            <AnchorLink href="#contact_section" className="navbar_button">
+              <Button {...button} title="PRENDRE RDV" />
+            </AnchorLink>
             <Drawer
               width="420px"
               placement="right"
@@ -69,11 +66,12 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
                 drawerClose={true}
                 offset={-100}
               />
-              <Link href="#">
-                <a className="navbar_drawer_button">
-                  <Button {...button} title="LET'S TALK" />
-                </a>
-              </Link>
+              <AnchorLink
+                href="#contact_section"
+                className="navbar_drawer_button"
+              >
+                <Button {...button} title="Prendre RDV" />
+              </AnchorLink>
             </Drawer>
           </Box>
         </Box>

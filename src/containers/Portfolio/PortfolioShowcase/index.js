@@ -226,6 +226,7 @@ PortfolioShowcase.defaultProps = {
   },
   detailsStyle: {
     fontSize: ["15px", "15px", "15px", "16px", "16px"],
+    fontWeight: 300,
     color: "#43414e",
     lineHeight: "1.5",
     mb: "0"

@@ -1,25 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Line } from "rc-progress";
-import { Icon } from "react-icons-kit";
 import Box from "reusecore/src/elements/Box";
 import Text from "reusecore/src/elements/Text";
 import Heading from "reusecore/src/elements/Heading";
 import Image from "reusecore/src/elements/Image";
 import Container from "../../../components/UI/Container";
 
-import {
-  SkillItem,
-  SkillDetails,
-  SkillProgress,
-  SuccessRate,
-  ProgressBar,
-  SkillIcon,
-  SkillAbout
-} from "./skill.style";
+import { SkillItem, SkillDetails, SkillIcon, SkillAbout } from "./skill.style";
 import { SKILLS } from "../../../data/Portfolio/data";
-import { ic_thumb_up } from "react-icons-kit/md/ic_thumb_up";
-import colors from "../../../theme/portfolio/colors";
 
 const SkillSection = ({
   sectionWrapper,
@@ -29,18 +17,16 @@ const SkillSection = ({
   row,
   col,
   skillTitle,
-  skillDescription,
-  skillSuccessRate,
-  successRateText
+  skillDescription
 }) => {
   return (
-    <Box {...sectionWrapper} as="section">
+    <Box {...sectionWrapper} as="section" id="skills_section">
       <Container noGutter mobileGutter width="1200px">
         <Box {...secTitleWrapper}>
-          <Heading {...secTitle} content="Ways I can help you" />
+          <Heading {...secTitle} content="Tarifs et remboursements" />
           <Text
             {...secDescription}
-            content="Have a look, some could be interesting to help you achieve your business goals or start that project you always wanted to do... Yes, that one!"
+            content="L'ostéopathie n'est pas remboursée par l'assurance maladie. Cependant, de nombreuses mutuelles remboursent partiellement ou en totalité les séances d’ostéopathie. Pensez à contacter la votre pour lui demander."
           />
         </Box>
 
@@ -57,35 +43,6 @@ const SkillSection = ({
                     <Text content={item.description} {...skillDescription} />
                   </SkillAbout>
                 </SkillDetails>
-                <SkillProgress>
-                  <SuccessRate>
-                    <Icon
-                      icon={ic_thumb_up}
-                      size={12}
-                      className="skill_success_icon"
-                    />
-                    <Text
-                      as="span"
-                      content={`${item.successRate}% `}
-                      {...skillSuccessRate}
-                    />
-                    <Text
-                      as="span"
-                      content="Success Rate"
-                      {...skillSuccessRate}
-                      {...successRateText}
-                    />
-                  </SuccessRate>
-                  <ProgressBar>
-                    <Line
-                      percent={item.successRate}
-                      strokeWidth="1.8"
-                      trailWidth="1.8"
-                      strokeColor={colors.primary}
-                      trailColor={colors.trailColor}
-                    />
-                  </ProgressBar>
-                </SkillProgress>
               </SkillItem>
             </Box>
           ))}
@@ -144,7 +101,7 @@ SkillSection.defaultProps = {
     mr: ["-15px", "-15px", "-15px", "-25px", "-25px"]
   },
   col: {
-    width: [1, 1, 1 / 2],
+    width: [1, 1, 0.5, 0.33],
     pl: ["15px", "15px", "15px", "25px", "25px"],
     pr: ["15px", "15px", "15px", "25px", "25px"],
     mb: ["30px", "30px", "30px", "50px", "50px"]
@@ -157,21 +114,10 @@ SkillSection.defaultProps = {
   },
   skillDescription: {
     fontSize: ["15px", "15px", "15px", "16px", "16px"],
-    fontWeight: "400",
+    fontWeight: "300",
     color: "#43414e",
     lineHeight: "1.5",
     mb: "0"
-  },
-  skillSuccessRate: {
-    fontSize: ["15px", "15px", "14px", "15px", "16px"],
-    fontWeight: "400",
-    color: "#302b4e",
-    lineHeight: "1.5",
-    mb: "0"
-  },
-  successRateText: {
-    ml: ".3em",
-    display: ["none", "none", "none", "none", "inline-block"]
   }
 };
 

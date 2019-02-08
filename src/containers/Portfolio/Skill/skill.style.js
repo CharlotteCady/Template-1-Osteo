@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const SkillItem = styled.div`
   position: relative;
@@ -8,23 +8,24 @@ export const SkillItem = styled.div`
 `;
 
 export const SkillDetails = styled.div`
-  padding: 85px 60px 55px 60px;
+  padding: 50px;
   display: flex;
   align-items: center;
   @media (max-width: 1199px) {
-    padding: 70px 45px 40px 45px;
+    padding: 40px;
   }
   @media (max-width: 990px) {
-    padding: 60px 35px 30px 35px;
+    padding: 35px;
   }
   @media (max-width: 575px) {
-    padding: 35px 25px 20px 25px;
+    padding: 25px;
   }
 `;
 
 export const SkillIcon = styled.div`
-  flex: 0 0 130px;
-  max-width: 130px;
+  flex: 0 0 100px;
+  max-width: 100px;
+  margin-right: 20px;
   @media (max-width: 990px) {
     flex: 0 0 55px;
     max-width: 55px;
@@ -33,7 +34,6 @@ export const SkillIcon = styled.div`
   @media (max-width: 575px) {
     flex: 0 0 45px;
     max-width: 45px;
-    margin-right: 20px;
   }
 `;
 

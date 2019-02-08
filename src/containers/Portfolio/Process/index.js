@@ -1,16 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Icon } from "react-icons-kit";
 import Box from "reusecore/src/elements/Box";
 import Text from "reusecore/src/elements/Text";
 import Heading from "reusecore/src/elements/Heading";
 import Image from "reusecore/src/elements/Image";
-import Button from "reusecore/src/elements/Button";
 import Container from "../../../components/UI/Container";
-import { plus } from "react-icons-kit/feather/plus";
-import { ButtonWrapper } from "../../Portfolio/portfolio.style";
 import ProcessItem from "./process.style";
-import { PROCESS_STEPS, SERVICE_LIST } from "../../../data/Portfolio/data";
+import { PROCESS_STEPS } from "../../../data/Portfolio/data";
 import colors from "../../../theme/portfolio/colors";
 
 const ProcessSection = ({
@@ -22,32 +18,16 @@ const ProcessSection = ({
   processCol,
   processImageStyle,
   processTitleStyle,
-  processDescriptionStyle,
-  learningRow,
-  learningContentArea,
-  learningListArea,
-  learningTitle,
-  learningSubTitle,
-  learningDescription,
-  buttonWrapper,
-  buttonLabelStyle,
-  buttonStyle,
-  learningList,
-  listItem,
-  listText,
-  listTitle
+  processDescriptionStyle
 }) => {
   return (
     <Box {...sectionWrapper} as="section" id="process_section">
       <Container noGutter mobileGutter width="1200px">
         <Box {...secTitleWrapper}>
-          <Heading
-            {...secTitle}
-            content="From Lean Design Sprints to Agile Development"
-          />
+          <Heading {...secTitle} content="Le déroulement d'une séance" />
           <Text
             {...secDescription}
-            content="Our process is designed to give you the best shot at success."
+            content="Une pratique douce et pédagogique"
           />
         </Box>
 
@@ -70,50 +50,6 @@ const ProcessSection = ({
             </Box>
           ))}
         </Box>
-
-        <Box {...learningRow}>
-          <Box {...learningContentArea}>
-            <Heading
-              content="Which is why we Never Stop Learning."
-              {...learningTitle}
-            />
-            <Text
-              content="We believe that we succeed when our clients succeed."
-              {...learningSubTitle}
-            />
-            <Text
-              {...learningDescription}
-              content="I’m Tom Parkes, a New Zealand born digital designer currently looking for opportunities in Canada. Over the 8 years of my career, my portfolio includes user interface design, brand & identity design, illustration, and art & creative direction."
-            />
-            <Text
-              {...learningDescription}
-              content="While at Neverbland over the last few years, I've worked on web and product solutions for a range of startups, in a variety of industries."
-            />
-            <Box {...buttonWrapper}>
-              <Text content="Start Your Project ?" {...buttonLabelStyle} />
-              <ButtonWrapper>
-                <Button
-                  title="hello@danielkorpai.com"
-                  className="portfolio_button"
-                  {...buttonStyle}
-                />
-              </ButtonWrapper>
-            </Box>
-          </Box>
-          <Box {...learningListArea}>
-            {SERVICE_LIST.map((serviceList, index) => (
-              <Box {...learningList} key={`serviceList-${index}`}>
-                <Heading content={serviceList.title} {...listTitle} />
-                {serviceList.listItems.map((item, index) => (
-                  <Box {...listItem} key={`list-item-${index}`}>
-                    <Icon icon={item.icon || plus} size={item.iconSize || 12} />
-                    <Text as="span" content={item.content} {...listText} />
-                  </Box>
-                ))}
-              </Box>
-            ))}
-          </Box>
-        </Box>
       </Container>
     </Box>
   );
@@ -128,20 +64,7 @@ ProcessSection.propTypes = {
   processCol: PropTypes.object,
   processImageStyle: PropTypes.object,
   processTitleStyle: PropTypes.object,
-  processDescriptionStyle: PropTypes.object,
-  learningRow: PropTypes.object,
-  learningContentArea: PropTypes.object,
-  learningListArea: PropTypes.object,
-  learningTitle: PropTypes.object,
-  learningSubTitle: PropTypes.object,
-  learningDescription: PropTypes.object,
-  buttonWrapper: PropTypes.object,
-  buttonLabelStyle: PropTypes.object,
-  buttonStyle: PropTypes.object,
-  learningList: PropTypes.object,
-  listItem: PropTypes.object,
-  listText: PropTypes.object,
-  listTitle: PropTypes.object
+  processDescriptionStyle: PropTypes.object
 };
 
 ProcessSection.defaultProps = {
@@ -183,7 +106,8 @@ ProcessSection.defaultProps = {
   processImageStyle: {
     ml: "auto",
     mr: "auto",
-    mb: "35px"
+    mb: "35px",
+    height: "150px"
   },
   processTitleStyle: {
     fontSize: ["20px", "18px", "20px", "20px", "20px"],
@@ -194,81 +118,10 @@ ProcessSection.defaultProps = {
   },
   processDescriptionStyle: {
     fontSize: ["15px", "15px", "16px", "16px"],
-    fontWeight: "400",
+    fontWeight: "300",
     color: colors.textColor,
     textAlign: "center",
     lineHeight: "1.5"
-  },
-  learningRow: {
-    flexBox: true,
-    flexWrap: "wrap",
-    mt: ["20px", "30px", "70px", "80px", "110px"]
-  },
-  learningContentArea: {
-    width: ["100%", "100%", "50%", "50%", "50%"],
-    pr: ["0px", "0px", "60px", "80px", "160px"],
-    mb: ["70px", "70px", "0", "0", "0"]
-  },
-  learningTitle: {
-    fontSize: ["22px", "22px", "24px", "30px", "30px"],
-    fontWeight: "700",
-    color: colors.headingColor,
-    lineHeight: "1.34",
-    mb: ["20px", "20px", "15px", "20px", "20px"],
-    pr: ["0", "0", "0", "65px", "65px"]
-  },
-  learningSubTitle: {
-    fontSize: ["16px", "16px", "18px", "20px", "20px"],
-    fontWeight: "400",
-    color: colors.textColor,
-    lineHeight: "1.5",
-    mb: "20px",
-    pr: ["0", "0", "0", "65px", "65px"]
-  },
-  learningDescription: {
-    fontSize: "16px",
-    color: colors.textColor,
-    lineHeight: "1.5",
-    mb: "25px"
-  },
-  buttonWrapper: {
-    flexBox: true,
-    alignItems: "center",
-    mt: ["30px", "40px", "40px", "80px", "80px"],
-    flexWrap: ["wrap"]
-  },
-  buttonLabelStyle: {
-    fontSize: "16px",
-    fontWeight: "500",
-    color: colors.primary,
-    mb: ["20px", "20px", "20px", "0", "0"],
-    mr: "30px",
-    width: ["100%", "100%", "100%", "auto", "auto"]
-  },
-  buttonStyle: {
-    type: "button",
-    fontSize: "16px",
-    fontWeight: "500",
-    color: "#fff",
-    pl: "23px",
-    pr: "23px"
-  },
-  learningListArea: {
-    width: ["100%", "100%", "50%", "50%", "50%"],
-    flexBox: true,
-    flexWrap: "wrap"
-  },
-  learningList: {
-    width: ["100%", "33.3333333%", "50%", "50%", "50%"],
-    pl: ["0", "0", "35px", "35px", "35x"],
-    pr: ["0", "30px", "0", "0", "0"],
-    mb: ["40px", "40px", "60px", "80px", "90px"]
-  },
-  listTitle: {
-    fontSize: "20px",
-    fontWeight: "600",
-    color: colors.headingColor,
-    mb: "25px"
   },
   listItem: {
     flexBox: true,

@@ -35,7 +35,7 @@ const Footer = ({
   noMargin
 }) => {
   return (
-    <FooterWrapper>
+    <FooterWrapper id="contact_section">
       <Container noGutter mobileGutter width="1200px">
         <Box {...row}>
           <Box {...col}>

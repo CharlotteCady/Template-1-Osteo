@@ -42,16 +42,9 @@ export const TestimonialItem = styled.div`
 
 export const TestimonialHead = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 25px;
-
-  a {
-    color: ${props => props.theme.colors.iconGrey};
-    transition: 0.15s ease-in-out;
-    &:hover {
-      color: ${props => props.theme.colors.primaryHover};
-    }
-  }
+  color: ${props => props.theme.colors.primary};
 `;
 
 export const TestimonialThumb = styled.div`
