@@ -17,7 +17,10 @@ import ContactSection from "../containers/Portfolio/Contact";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Ostéopathe Marc Durand"
+      keywords={[`gatsby`, `application`, `react`]}
+    />
     <BannerSection />
     <ExperiencesSection />
     <PortfolioShowcase />
