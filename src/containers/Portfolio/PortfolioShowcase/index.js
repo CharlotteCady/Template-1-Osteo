@@ -38,8 +38,8 @@ const PortfolioShowcase = ({
   const carouselOptions = {
     type: "carousel",
     perView: 1,
-    gap: 0,
-    animationDuration: 900
+    gap: 0
+    // animationDuration: 900
   };
 
   return (
@@ -49,7 +49,7 @@ const PortfolioShowcase = ({
           <Heading {...secTitle} content="L’ostéopathie pour tous !" />
           <Text
             {...secDescription}
-            content="L’ostéopathie s’adresse à l’homme tout au long de sa vie qu’il soit nourrisson, adulte, âgé, sportif ou non."
+            content="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
           />
         </Box>
 

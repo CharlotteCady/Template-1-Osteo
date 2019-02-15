@@ -31,7 +31,7 @@ const AwardsSection = ({
   //Carousel Options
   const carouselOptions = {
     type: "carousel",
-    autoplay: 4000,
+    autoplay: 8000,
     perView: 4,
     gap: 30,
     animationDuration: 800,
@@ -55,7 +55,7 @@ const AwardsSection = ({
           <Heading {...secTitle} content="Quand consulter ?" />
           <Text
             {...secDescription}
-            content="Les champs d’application de l’ostéopathie sont très variés. L’ostéopathe a une vision du corps dans sa globalité, et est en mesure de vous aider à améliorer votre adaptabilité, à optimiser les divers fonctionnements de votre corps, à récupérer des traumas subis, à minimiser leurs séquelles potentielles, ou encore à améliorer votre posture."
+            content="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
           />
         </Box>
 

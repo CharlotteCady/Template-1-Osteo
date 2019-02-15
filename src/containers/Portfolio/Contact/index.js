@@ -48,7 +48,7 @@ const ContactSection = ({
           <IconWrapper>
             <Icon icon={send} size={18} className="contact-icon" />
           </IconWrapper>
-          <Text as="p" content="m.durand@gmail.com" {...replyTime} />
+          <Text as="p" content="john.doe@gmail.com" {...replyTime} />
         </Box>
         <Box {...replyWrapper}>
           <IconWrapper>

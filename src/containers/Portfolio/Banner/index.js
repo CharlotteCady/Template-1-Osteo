@@ -27,7 +27,7 @@ const BannerSection = ({
         <Box {...row}>
           <Box {...contentArea}>
             {/* <Heading content="Ostéopathe à Nantes" {...greetingStyle} /> */}
-            <Heading content="Marc Durand" {...nameStyle} />
+            <Heading content="John Doe" {...nameStyle} />
             <Heading content="Ostéopathe à Nantes" {...designationStyle} />
             <Box {...roleWrapper}>
               <Icon
@@ -38,7 +38,7 @@ const BannerSection = ({
               <Heading content="Soulagez vos douleurs" {...roleStyle} />
             </Box>
             <Text
-              content="Qu’il s’agisse d’une urgence, d’une consultation en cabinet ou à domicile, je vous conseille et vous guide dans le processus de guérison. L’ostéopathie est une médecine alternative largement reconnue pour soulager les douleurs d’origine mécanique, en particulier les douleurs en bas du dos et à la nuque (cervicales)."
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
               {...aboutStyle}
             />
             <SocialProfile items={SOCIAL_PROFILES} />

@@ -68,7 +68,7 @@ const Footer = ({ row, col, linkStyle, copyrightStyle, azertyStudio }) => {
             />
             <Text
               as="p"
-              content="Copyright © Marc Durand 2019 - Tous droits réservés."
+              content="Copyright © John Doe 2019 - Tous droits réservés."
               {...copyrightStyle}
             />
             <FooterNav>

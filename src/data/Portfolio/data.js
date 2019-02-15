@@ -90,36 +90,37 @@ export const AWARDS = [
     awardLogo: Squelette,
     awardName: "L'appareil locomoteur",
     awardDetails:
-      "Cervicalgie, torticoli, dorsalgie, douleur intercostale, lumbago, névralgie, entorse, accident musculaire, tendinite, séquelles d'accident, mal de tête d’origine mécanique, etc."
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
     awardLogo: Cerveau,
     awardName: "Le système nerveux et vasculaire",
     awardDetails:
-      "Névralgies, troubles du retour veineux, troubles de l'humeur, prise en charge des maladies neurodégénératives, etc."
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
     awardLogo: Estomac,
     awardName: "Le système digestif",
     awardDetails:
-      "Ballonements, brûlures d'estomac, diarrhée, constipation, régurgitations, nausées, etc."
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
     awardLogo: Urethra,
     awardName: "Le système génito-urinaire",
     awardDetails:
-      "Cystites chroniques, enurésie, prévention des infections urinaires, suivi de la grossesse, règles irrégulières ou douloureuses, etc."
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
     awardLogo: Bouche,
     awardName: "La bouche et la sphère ORL",
     awardDetails:
-      "Otites, acouphènes, rhinites, sinusites, conjonctivites, vertiges fonctionnels, etc."
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
     awardLogo: Poumons,
     awardName: "Le système respiratoire",
-    awardDetails: "Asthme, prévention des bronchites répétitives."
+    awardDetails:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   }
 ];
 
@@ -130,7 +131,7 @@ export const PORTFOLIO_SHOWCASE = [
       {
         title: "L'ostéopathie chez le bébé",
         description:
-          "Le but d’une consultation ostéopathique chez le nouveau-né et le bébé est de rétablir un équilibre physique parfois perturbé lors de la vie intra-utérine ou de l’accouchement.",
+          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         image: BebeImage,
         buildWith: [
           {
@@ -161,7 +162,7 @@ export const PORTFOLIO_SHOWCASE = [
       {
         title: "L'ostéopathie chez l'enfant",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend aliquet dui, eget ultricies orci volutpat ac. Quisque vitae velit eget lorem consequat vehicula posuere venenatis nulla.",
+          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         image: EnfantImage,
         buildWith: [
           {
@@ -192,7 +193,7 @@ export const PORTFOLIO_SHOWCASE = [
       {
         title: "L'ostéopathie pendant la grossesse",
         description:
-          "Le but du travail de l’ostéopathe est d’équilibrer les changements morphologiques et toutes leurs conséquences viscérales, articulaires et fonctionnelles. Les techniques utilisées sont douces et adaptées à la patiente.",
+          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         image: EnceinteImage,
         buildWith: [
           {
@@ -226,7 +227,7 @@ export const PORTFOLIO_SHOWCASE = [
       {
         title: "L'ostéopathie chez l'adulte",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend aliquet dui, eget ultricies orci volutpat ac. Quisque vitae velit eget lorem consequat vehicula posuere venenatis nulla.",
+          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         image: AdulteImage,
         buildWith: [
           {
@@ -317,19 +318,19 @@ export const PROCESS_STEPS = [
     image: Step1,
     title: "1. L’anamnèse",
     description:
-      "Permet de bien cibler la douleur, de connaitre les antécédents  du patient ainsi que ses habitudes de vie"
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
   },
   {
     image: Step2,
     title: "2. L'examen clinique",
     description:
-      "Permet de poser un diagnostic ostéopathique et de trouver avec précision la zone du corps douloureuse et les causes de cette douleur afin d’élaborer un plan de traitement."
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
   },
   {
     image: Step3,
     title: "3. Le traitement",
     description:
-      "Propre à chaque patient, à ses antécédents et à son motif de consultation. J'utilise une grande diversité de techniques, toujours adaptées au patient et non traumatisantes. "
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
   }
 ];
 
@@ -338,16 +339,16 @@ export const SERVICE_LIST = [
     title: "Expériences",
     listItems: [
       {
-        content: "Ostéopathe au cabinet d'ostéopathie Durand à Nantes - 2017"
+        content: "Expérience 1 - Lieu et année"
       },
       {
-        content: "Ostéopathe au cabinet d'ostéopathie Parmentier à Paris - 2015"
+        content: "Expérience 2 - Lieu et année"
       },
       {
-        content: "Conférencier au séminaire des ostéopathes de Nantes - 2015"
+        content: "Expérience 3 - Lieu et année"
       },
       {
-        content: "Assistant de cours et de clinique - 2013"
+        content: "Expérience 4 - Lieu et année"
       }
     ]
   },
@@ -355,19 +356,24 @@ export const SERVICE_LIST = [
     title: "Formations",
     listItems: [
       {
-        content: "Diplôme 1"
+        content: "Formation 1 - Lieu et année"
       },
       {
-        content: "Diplôme 2"
+        content: "Formation 2 - Lieu et année"
       },
       {
-        content: "Formation 1"
+        content: "Formation 3 - Lieu et année"
+      }
+    ]
+  },
+  {
+    title: "Autre",
+    listItems: [
+      {
+        content: "Autre 1 - Lieu et année"
       },
       {
-        content: "Formation 2"
-      },
-      {
-        content: "Formation 3"
+        content: "Autre 2 - Lieu et année"
       }
     ]
   }
@@ -422,19 +428,19 @@ export const TESTIMONIAL = [
   {
     image: Reviewer1,
     review:
-      "Excellent ostéopathe, qui connaît parfaitement son métier ! Il a soulagé efficacement une douleur qui me pénalisait depuis plusieurs mois. Encore merci !",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     name: "Philippe"
   },
   {
     image: Reviewer2,
     review:
-      "Très satisfaite de cet ostéopathe qui se met toujours à la portée de son patient. Il m'a remarquablement soigné là ou d'autres n'ont pas été aussi efficaces, je le recommande vivement.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     name: "Juliette"
   },
   {
     image: Reviewer3,
     review:
-      "Des mains en or. De la gentillesse, à l écoute. Que demander de plus. A recommander.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     name: "Christian"
   }
 ];

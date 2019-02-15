@@ -26,7 +26,7 @@ const SkillSection = ({
           <Heading {...secTitle} content="Tarifs et remboursements" />
           <Text
             {...secDescription}
-            content="L'ostéopathie n'est pas remboursée par l'assurance maladie. Cependant, de nombreuses mutuelles remboursent partiellement ou en totalité les séances d’ostéopathie. Pensez à contacter la votre pour lui demander."
+            content="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
           />
         </Box>
 
